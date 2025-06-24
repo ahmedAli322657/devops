@@ -1,0 +1,10 @@
+FROM node:18 AS builder
+WORKDIR /app
+# add the dependencies
+RUN ls
+COPY . .
+EXPOSE 4000
+FROM node:18-slim
+WORKDIR /app
+# COPY --from=builder (the needed packages) ./ 
+CMD [ "node" ]

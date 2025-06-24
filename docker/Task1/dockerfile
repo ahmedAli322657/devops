@@ -1,0 +1,6 @@
+FROM node:18
+ADD . /app
+WORKDIR /app
+RUN ls
+EXPOSE 80
+CMD ["/app/tests.sh"]
